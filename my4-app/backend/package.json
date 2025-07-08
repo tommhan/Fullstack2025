@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "harjoitus 3. kappaleeseen",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": " \"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tommhan/Fullstack2025.git"
+  },
+  "keywords": [
+    "harjoitus",
+    "backend"
+  ],
+  "author": "Hannu Tommola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tommhan/Fullstack2025/issues"
+  },
+  "homepage": "https://github.com/tommhan/Fullstack2025#readme"
+}
