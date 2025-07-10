@@ -1,10 +1,10 @@
-import Note from './components/Note'
-
 import { useState, useEffect } from 'react'
 import Footer from './components/Footer'
 import Note from './components/Note'
 import Notification from './components/Notification'
 import noteService from './services/notes'
+
+console.log("Tämän pitäisi olla frontti ")
 
 const App = () => {
   const [notes, setNotes] = useState([])
