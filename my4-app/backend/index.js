@@ -1,6 +1,22 @@
 const express = require('express')
 const app = express()
 //const cors = require('cors') 
+const mongoose = require('mongoose')
+
+
+// ÄLÄ KOSKAAN TALLETA SALASANOJA GitHubiin!
+const password = process.argv[2]
+const url = `mongodb+srv://fullstack:${password}@cluster0.a5qfl.mongodb.net/noteApp?retryWrites=true&w=majority&appName=Cluster0`
+
+mongoose.set('strictQuery',false)
+mongoose.connect(url)
+
+const noteSchema = new mongoose.Schema({
+  content: String,
+  important: Boolean,
+})
+
+const Note = mongoose.model('Note', noteSchema)
 
 let notes = [
   {
@@ -28,6 +44,11 @@ const requestLogger = (request, response, next) => {
   next()
 }
 //app.use(cors())
+app.get('/api/notes', (request, response) => {
+  Note.find({}).then(notes => {
+    response.json(notes)
+  })
+})
 app.use(express.json())
 app.use(requestLogger)
 app.use(express.static('dist'))
