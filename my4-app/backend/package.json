@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/tommhan/Fullstack2025#readme",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "mongoose": "^8.16.5"
   }
