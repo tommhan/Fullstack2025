@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-//const cors = require('cors') 
+//const cors = require('cors')
 const mongoose = require('mongoose')
 
 
@@ -16,7 +16,7 @@ const noteSchema = new mongoose.Schema({
   important: Boolean,
 })
 
-const Note = mongoose.model('Note', noteSchema)
+const Note = mongoose.model('Note', noteSchema) 
 
 let notes = [
   {
