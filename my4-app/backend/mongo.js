@@ -7,7 +7,7 @@ if (process.argv.length < 3) {
 
 const password = process.argv[2]
 
-const url = `mongodb+srv://tommhan:${password}@cluster0.gevtxjz.mongodb.net/noteApp?
+const url = `mongodb+srv://my4-app:${password}@cluster0.wfr11gk.mongodb.net/noteApp?
 retryWrites=true&w=majority&appName=Cluster0`
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
@@ -20,7 +20,7 @@ const noteSchema = new mongoose.Schema({
 const Note = mongoose.model('Note', noteSchema)
 
 const note = new Note({
-  content: 'HTML is easy',
+  content: 'HTML is easy but github, render etc. security',
   important: true,
 })
 
